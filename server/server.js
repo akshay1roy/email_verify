@@ -4,6 +4,8 @@ import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
 import connectDB from './config/mongodb.js';
 import authRouter from './routes/authRoutes.js';
+import userRouter from './routes/userRoutes.js';
+// import userRouter from './routes/userRoutes.js';
 
 dotenv.config();
 
@@ -35,6 +37,9 @@ console.log('SENDER_EMAIL:', process.env.SENDER_EMAIL);
 // Set up auth routes
 
 app.use('/api/auth', authRouter);
+app.use('/api/user',userRouter)
+// app.use('/api/user',userRouter)
+// app.use('/api/user',userRouter)
 
 
 app.listen(port, () => {
