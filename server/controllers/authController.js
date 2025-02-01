@@ -98,6 +98,8 @@ export const login = async (req, res) => {
             maxAge: 7 * 24 * 60 * 60 * 1000
         })
 
+        // console.log("token Login ",token);
+
         return res.json({ success: true, message: { user, token } })
 
     } catch (error) {
@@ -109,7 +111,8 @@ export const login = async (req, res) => {
 
 export const logout = async (req, res) => {
     try {
-        res.clearcookie('token', {
+        console.log("Logout",res.cookie.token)
+        res.clearCookie('token', {
             httpOnly: true,
             secure: process.env.NODE_EVN === 'production',
             sameSite: process.env.NODE_EVN === 'production' ? 'none' : 'strict',
