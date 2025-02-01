@@ -10,10 +10,10 @@ export const Navbar = () => {
   const {
     userData,
     backendUrl,
-    isLoggedin,
+    // isLoggedin,
     setIsLoggedin,
     setUserData,
-    getUserData,
+    // getUserData,
   } = useContext(AppContext);
 
   const sendVerificationOtp=async()=>{
