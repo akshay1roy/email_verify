@@ -10,7 +10,7 @@ export const AppContextProvider = (props) => {
 
 
 
-  const backendUrl = https://email-verify-backend-cdkg.onrender.com || import.meta.env.VITE_BACKEND_URL;
+  const backendUrl = "https://email-verify-backend-cdkg.onrender.com" || import.meta.env.VITE_BACKEND_URL;
   const [isLoggedin, setIsLoggedin] = useState(false);
   const [userData, setUserData] = useState(false);
 
