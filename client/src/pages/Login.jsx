@@ -83,6 +83,7 @@ const Login = () => {
                 required
                 className="bg-transparent outline-none"
                 onChange={(e) => setName(e.target.value)}
+                autocomplete="name"
               />
             </div>
           )}
@@ -95,6 +96,7 @@ const Login = () => {
               required
               className="bg-transparent outline-none"
               onChange={(e) => setEmail(e.target.value)}
+               autocomplete="email"
             />
           </div>
 
@@ -106,6 +108,7 @@ const Login = () => {
               required
               className="bg-transparent outline-none"
               onChange={(e) => setPassword(e.target.value)}
+              autocomplete={state === "Sign Up" ? "new-password" : "current-password"}
             />
           </div>
 
